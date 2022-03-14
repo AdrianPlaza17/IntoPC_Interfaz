@@ -1,0 +1,49 @@
+<ion-content>
+  <div id="container"></div>
+  <div id="imagen" ></div>
+  
+  <div id="registroLoginBotones">
+    <img id="logo" src="assets/img/Logo.png">
+    <div id="botones">
+       
+      <ion-button color="secondary" id="botonesInicio" style="font-family: 'Quicksand', sans-serif;" >
+       Iniciar sesión
+      </ion-button>
+      <ion-button color="secondary" id="botonesInicio" href="/registro" fill="outline" style="font-family: 'Quicksand', sans-serif;" >
+        Registrarse
+      </ion-button>
+  
+    </div>
+  </div>  
+  
+  <form [formGroup]="usuario">
+    <div id="container">
+    <div id="containerFlex">
+    <ion-item>
+      <ion-input style="--highlight-color-focused:rgb(230, 135, 46);" type="text" placeholder="Usuario" clear-input="true" color="primary" formControlName="email" autocapitalize="off"></ion-input>
+    </ion-item>
+   <ion-label color="danger" *ngIf="usuario.controls.email.errors?.email && (usuario.touched || usuario.dirty)">* El email no es válido.</ion-label>
+    <ion-item>
+      <ion-input style="--highlight-color-focused:rgb(230, 135, 46);"  type="password" placeholder="Contraseña" clear-input="true" color="primary" formControlName="password" type="password"></ion-input>
+    </ion-item>
+   
+  
+    <p  style="font-family: 'Quicksand', sans-serif;" ><a href="" id="azul">He olvidado mi contraseña</a></p>
+  
+  
+    <ion-button id="botonEntrar" color="secondary" shape="round" [disabled]="!usuario.valid" (click)="login()" type="submit" style="font-family: 'Quicksand', sans-serif;" >Entrar</ion-button>
+    
+  
+  </div>
+  
+    </div>
+    </form>
+<div id="facebookGoogle">
+  <h6 style="font-family: 'Quicksand', sans-serif;" >Iniciar sesión con:</h6>
+  <div id="social">
+<img id="imagenSocial" src="/assets/img/googlepng.png">
+<img id="imagenSocial" src="/assets/img/facebook.png">
+</div>
+</div>
+
+</ion-content>

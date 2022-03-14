@@ -1,0 +1,54 @@
+
+
+<ion-content>
+  <div id="imagen" ></div>
+  
+  <div id="registroLoginBotones">
+    <img id="logo" src="assets/img/Logo.png">
+    <div id="botones">
+       
+      <ion-button color="secondary" id="botonesInicio" href="/login" fill="outline" style="font-family: 'Quicksand', sans-serif;" >
+       Iniciar sesión
+      </ion-button>
+      <ion-button color="secondary" id="botonesInicio" style="font-family: 'Quicksand', sans-serif;"  >
+        Registrarse
+      </ion-button>
+  
+    </div>
+  </div>  
+  
+  <form [formGroup]="usuario">
+    <div id="container">
+    <div id="containerFlex">
+      <div>
+    <ion-item>
+      <ion-input type="text" placeholder="Usuario" clear-input="true" color="primary" formControlName="email" autocapitalize="off"></ion-input>
+    </ion-item>
+   <ion-label color="danger" *ngIf="usuario.controls.email.errors?.email && (usuario.touched || usuario.dirty)">* El email no es válido.</ion-label>
+    <ion-item>
+      <ion-input type="password" placeholder="Contraseña" clear-input="true" color="primary" formControlName="password" type="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="password" placeholder="Repetir contraseña" clear-input="true" color="primary" formControlName="password" type="password"></ion-input>
+    </ion-item>
+    </div>
+    <div id="terminos" style="font-family: 'Quicksand', sans-serif;" ><div id="check"><ion-checkbox ></ion-checkbox></div><p style="font-size: 11px; text-align: center;">He leído y acepto la <a href="">política de privacidad</a> y los <a href=""> términos y condiciones</a></p></div>
+      
+    
+    <ion-button style="font-family: 'Quicksand', sans-serif;"  id="botonEntrar"  shape="round" [disabled]="!usuario.valid" (click)="signin()" type="submit" color="secondary" expand="block">Registrarse</ion-button>
+    
+    
+  
+  </div>
+  
+    </div>
+    </form>
+<div id="facebookGoogle">
+  <h6 style="font-family: 'Quicksand', sans-serif;">Registrarse con:</h6>
+  <div id="social">
+<img id="imagenSocial" src="/assets/img/googlepng.png">
+<img id="imagenSocial" src="/assets/img/facebook.png">
+</div>
+</div>
+
+</ion-content>

@@ -1,0 +1,68 @@
+
+<div id="cabecera">
+    <ion-buttons>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <a href="/tabs/tab1"><img width="40px" height="auto" src="../../assets/img/IntoPC.png"  height="auto" ></a>
+    <ion-searchbar border-color="primary" placeholder="Buscar"></ion-searchbar>
+
+</div>
+    <ion-content>
+      
+      <div id="container">
+        <div id="opciones">
+            <ion-checkbox color="medium"></ion-checkbox><label id="check">Seleccionar todos</label>
+            <label id="eliminarProductos"> Eliminar productos</label>
+          </div> 
+
+      <div id="productos">
+      <div id="producto">
+        <div id="fotoDescuento">
+          <div id="promociones">
+            <ion-checkbox color="medium" id="box"></ion-checkbox><h1 id="descuento">15%</h1>
+          </div>
+          <img src="../../assets/img/placa1.1.jpg" id="fotoProducto"alt="">
+          
+        </div>
+        <div id="especificaciones">
+          <div id="precios">
+            <p id="precio">58,90€</p>
+            <strike><p id="noRebaja">87,92€</p></strike>
+          </div>
+          <div id="info">
+            <span class="ion-text-start"> <b>Gigabyte</b> B550M DS3H </span>
+            <p id="fechaProducto">Llega el 30/11/21</p>
+        </div>
+        <ion-chip color="success">En Stock</ion-chip>
+        <div id="espacio">
+        <ion-button id="añadir" color="light">+ 1 -</ion-button>        
+        <ion-icon name="trash-outline" style="zoom: 1.5; margin-top: 10%;"></ion-icon>
+      </div>
+        </div>
+      </div>
+      
+            
+          </div>
+    </div>
+
+    <div id="botones">
+         <ion-button color="secondary" id="boton3" href="/pago">
+          Comprar
+        </ion-button>
+        <div id="total">
+        <h6>Total:</h6>
+        <h6 style="color: rgb(230, 135, 46); font-weight: bold; font-size: large;">58,90€</h6>
+        </div> 
+         
+        </div>
+        <div id="botones2">
+            <div id="carrito">
+                <h4>Carrito</h4> <ion-icon name="cart-outline" color="secondary"style="zoom: 2; padding-top: 5px;"></ion-icon>
+            </div>
+            <div id="guardados">
+              <a href="/tabs/guardados" id="enlace"></a>
+                <h4>Guardados</h4> <ion-icon name="heart" color="medium" style="zoom: 2; padding-top: 5px;"></ion-icon>
+            </div>
+           </div>
+
+</ion-content>
